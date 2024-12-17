@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORES</title>
+    <style>
+        div{
+            margin-bottom: 5px;
+        }
+        /*NOME DA COR*/
+        .color-name{
+            background-color: crimson;
+            color: white
+        }
+
+        /*NOME DA COR(HEXADECIMAL)*/
+        .hex{
+            background-color: #55d398;
+            color: #ff2fff;
+        }
+
+        /*NOME DA COR(RGB)*/
+        .rgb{
+            background-color: rgb(255, 0, 0);
+            color: white;
+        }
+        .mixed-rgb{
+            background-color: rgb(100, 200, 250);
+        }
+        .rgba{
+            background-color: rgba(0, 0, 220, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 3px solid black;">
+        <!--NOMES DAS CORES-->
+        <P class="color-name">Qualquer texto para nome de cores</P>
+    </div>
+
+    <div style="border: 3px solid black;">
+        <!--HEXADECIMAL OU HEX-->
+        <!--Temos 6 digitos seguidos do # -> (#000000) os valores vão de 0 a 9 e A a F-->
+        <!--0 é o mais escuro e o F é o mais claro, O valor #000 é a cor preta, e o valor #FFF é a cor branca-->
+        <p class="hex">HEXADECIMAL</p>
+        <!--Anotação em p-->
+        <p>Se um digito for repitido mais 6 vezes, podemos escrever a cor de forma mais simples</p>
+          0  <p>No caso de #FFFFFF, podemos reescrever com #FFF</p>
+        <p>A mesma coisa vale para #112233, podemos reescrever como #123</p>
+    </div>
+
+    <div style="border: 3px solid black;">
+        <!--RBG-->
+        <!--rgb é declarado como: rgb(000, 000, 000);-->
+        <!--Os valores podem de 0 até 255-->
+        <p class="rgb">Este foi estilizado com RGB</p>
+
+        <p class="mixed-rgb">Mixed RGB</p>
+
+        <!--rgba ajuda na opacidade do elemento: rgb(000, 000, 000, 00(opacidade de 0 a 1))-->
+        <p class="rgba">Este foi estilizado com RGBA</p>
+    </div>
+
+    <!--HEX > RGB > HSL > NOME COR-->
+    <p>Um ranking de uso das abordagens de cores, seria mais ou menos este: HEX > RGB > HSL > NOMES DE COR</p>
+
+    
+</body>
+</html>

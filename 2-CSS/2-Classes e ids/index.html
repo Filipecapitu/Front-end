@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSES E IDS</title>
+    <style>
+        div.section{
+            margin: auto;
+            border: 3px solid black;
+            width: 500px;   
+            margin-bottom: 5px;
+        }
+
+        /*CLASSES*/
+        p.paragrafo{
+            color: red;
+            text-align: center;
+        }
+
+        /*IDS*/
+        h1#exclusive-title{
+            color: rebeccapurple;
+        }
+
+        /*ORDEM DE SELETORES*/
+        li{
+            border-bottom: 3px solid blue;
+        }
+        li.ordem-classe{
+            border-bottom: 3px solid red;
+        }
+        li#ordem-id{
+            border-bottom:3px solid green ;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="section">
+        <!--CLASSES-->
+        <!--O valor do atributo é o nome da classe, o seletor de class é o (PONTO[.])-->
+        <P style="background-color: black; color: white;">CLASSE</P>
+        <p class="paragrafo">O valor do atributo é o <strong>nome da classe</strong></p>
+        <p class="paragrafo">Paragrafo 1</p>
+        <p class="paragrafo">Paragrafo 2</p>
+        <p class="paragrafo">Paragrafo 3</p>
+    </div>
+
+    <div class="section">
+        <!--IDS-->
+        <!--O valor do atributo é UNICO, ao contrato do class, não repetimos o mesmo nome da mesma página, o seletor de id é a(HASTG[#])-->
+        <p style="background-color: black; color: white;">ID</p>
+        <h1 id="exclusive-title">Este é um título com id</h1>
+    </div>
+
+    <div class="section">
+        <!--ORDEM DE SELETORES-->
+        <P style="background-color: black; color: white;">ORDEM DOS SELETORES</P>
+        <ol>
+            <li id="ordem-id" class="ordem-classe">ID</li>
+            <li class="ordem-classe">CLASS</li>
+            <li>DEFAULT</li>
+        </ol>
+        <p style="text-align: center;">ID > CLASS > DEFAULT</p>
+    </div>
+
+</body>
+</html>

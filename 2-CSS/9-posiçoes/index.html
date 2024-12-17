@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../0-stylecss/conteudo.css">
+    <title>Document</title>
+    <style>
+    
+        .conteudo{
+            height: 200px;
+        }
+
+        /*static*/
+        .static{
+            position: static;
+            background-color: #391;
+            color: #fff;
+            width: 150px;
+            height: 50px
+            
+        }
+
+        /*relative*/
+        .relative{
+            position: relative;
+            background-color: #f45;
+            color: #fff;
+            width: 150px;
+            height: 50px;
+            top: 70px;
+            left: 50px;
+        
+        }
+
+        /*absolute*/
+        .absolute{
+            position: absolute;
+            background-color: #55f;
+            color: #fff;
+            width: 150px;
+            height: 50px;
+            top: 2px;
+            right: 2px;
+
+        }
+        
+        /*relative com absolute*/
+        .relative-container{
+            position: relative;
+        }
+
+        .absolute1,
+        absolute{
+            background-color: #ff0;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 5px;
+            left: 500px
+
+        }
+
+        .absolute2{
+            background-color: #0ff;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 5px;
+            right: 500px;
+
+        }
+
+        /*fixed*/
+        .fixed{
+            width: 100px;
+            height: 100px;
+            background-color: #851;
+            border: 1px solid #00f;
+            position: fixed;
+            top: 50px;
+            right: 100px;
+        }
+
+        /*sticky*/
+        .sticky{
+            width: 100px;
+            height: 100px;
+            background-color: #051;
+            border: 1px solid #55f;
+            position: sticky    ;
+            top: 50px;
+        }
+
+        /*z-index*/
+
+        .absolute-3,
+        .absolute-4,
+        .absolute-5{
+            background-color: #ff0;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+
+        .absolute-3{
+            left: 0;
+            top: 0;
+            background-color: #f00;
+            z-index: 2;
+        }
+
+        .absolute-4{
+            left: 30px;
+            top: 30px;
+            background-color: #0f0;
+            z-index: 3;
+        }
+
+        .absolute-5{
+            left: 60px;
+            top: 60px;
+            background-color: #00f;
+            z-index: 1;
+        }
+        
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <!--sticky 2-->
+    <div class="conteudo">
+        <div class="sticky">
+            <p>eu sou sticky</p>
+        </div>
+    </div>
+
+
+
+    <!--Posições dos elementos-->
+
+    <!--O valor padrão da posiçao dos elementos é o valor [static], está regra é essencial quando precisamos mudar onde o elemento deve ficar no projeto-->
+
+    <!--static-->
+    <div class="conteudo">
+        <div class="static">
+            <p>Eu sou estático</p>
+        </div>
+        
+    </div>
+
+    <!--relative-->
+    <!--Agora as regras, top, left, right, e bottom movem o elemento pela tela seguindo o fluxo do HTML - NÃO É MUITO USUAL-->
+
+    <div class="conteudo">
+        <div class="relative">
+            <p>Eu sou relative</p>
+        </div>
+        <p>eu sou um paragrafo</p>
+        
+    </div>
+    
+    <!--absolute-->
+    <!--Este regra também é afetada por top, left, right e bottom, e quebramos o fluxo do HTML-->
+
+    <div class="conteudo">
+        <div class="absolute">
+            <p>Eu sou absolute</p>
+        </div>
+        <p>eu sou um paragrafo</p>
+    </div>
+
+    <!--relative com absolute-->
+    <!--Um elemento com position absolute é ligado ao elemento mais proximo com posição relativa, se não ele é ligado ao body-->
+
+    <!--Com um Container na posição relativa, podemos controlar melhor a area de açao dos elementos com absolute, util para centralizar elementos -->
+    <div class="conteudo">
+        <div class="relative-container">
+            <div class="absolute1"></div>
+            <div class="absolute2"></div>
+        </div>
+
+
+    </div>
+
+    <!--Fixed-->
+    <!--Com fixed, o elemento pode ser fixado na tela, mesmo após o scroll na página, o elemento irá permanecer na mesma posição, bastante ultilizado para criar barra de navegação fixa!-->
+
+    <div class="conteudo">
+        <div class="fixed">
+            <p>Sou fixo</p>
+        </div>
+
+        
+    </div>
+
+    <!--sticky-->
+    <!--Também faz um elemento ficar fixo na tela, porém tem um outro comportamento, quando o elemento volta para a sua posição original ele se comporta como relative, a posição do elemento é onde ele foi inserido no HTML-->
+    
+    <!--Exemplo de sticky no começo do HTML -> sticky 2-->
+
+
+    <!--z-index-->
+    <!--Se temos dois elementos com as mesmas posições ou se eles colidem na página, podemos escolhe qual será exibido-->
+    <!--O elemento com maior valor permanece-->
+
+    <div class="conteudo">
+        <div class="relative-container">
+            <div class="absolute-3"></div>
+            <div class="absolute-4"></div>
+            <div class="absolute-5"></div>
+        </div>
+    </div>
+
+</body>
+</html>

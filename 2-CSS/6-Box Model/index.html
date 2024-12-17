@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="../">
+    <style>
+        /*BOX MODEL*/
+        .conteudo{
+            margin: 10px;
+            padding: 10px;
+            border: 5px solid black;
+        }
+        #box-model{
+            background-image: url(imagem/CSS-Box-Model.webp);
+            width: 448px;
+            height: 300px;
+            background-size: cover;
+        }
+
+        /*Largura e altura*/
+        /*A maioria dos elementos do DISPLAY-BOX, a largura é de 100%*/
+        .largura{
+            background-color: black;
+            width: 600px;
+            height: 50px;
+        }
+        
+
+        .altura{
+            background-color: cyan;
+            height: 100px;
+            width: 65px;
+        }
+
+        /*Padding*/
+        .sempadding{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .compadding{
+            padding: 10px;
+            margin: 0px;
+        }
+
+        /*Padding com Width*/
+        .sem-border-box{
+            background-color: #666;
+            color: white;
+            width: 300px;
+            padding: 15px;
+            margin-bottom: 2px;
+            
+        }
+
+        .border-box{
+            background-color: #666;
+            color: white;
+            width: 300px;
+            padding: 15px;
+            box-sizing: border-box; /*box-sizing*/
+        }
+
+        /*Border*/
+        .border-1{
+            border: 2px solid #00f;
+        }
+        .border-2{
+            border: 4px dotted #f00;
+        }
+
+        /*Margin*/
+        .margin{
+            background-color: #000;
+            color: white;
+            margin: 10px;
+        }
+
+        .margin-top{
+            background-color: #000;
+            color: white;
+            margin-top: 50px;
+
+
+        }
+
+        .margin-shorthand{
+            background-color: #000;
+            color: white;
+            margin: 20px 5px 3px 10px;
+
+        }
+
+        /*BOX-MODEL*/
+        .BOX-MODEL{
+            background-color: #0f0;
+            color: #111;
+            width: 650px;
+            height: 100px;
+            padding: 20px 30px;
+            border: 5px solid black;
+            outline: 5px solid red;
+            border-radius: 90px;
+            margin-left: 50px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <!--BOX MODEL-->
+    <div class="conteudo">
+        <h1>Modelo do Box-Model:</h1>
+        <div id="box-model">
+        
+        </div>
+    </div>
+
+    <!--Largura(width) / Altura(height)-->
+    <div class="conteudo">
+        <h1>Largura e Altura</h1>
+        <div class="largura" style="color: white;">LARGURA</div>
+        <div class="altura">ALTURA</div>
+    </div>
+
+    <!--Padding-->
+
+    <!--Podemos escolher para qual direção do elemento inserir o padding, são eles; padding-top, padding-right, padding-bottom e padding-left-->
+    <!--SHORTHAND; padding 0px[cima] 0px[direita] 0px[esquerda] 0px[baixo];-->
+    <div class="conteudo">
+        <h1>Padding</h1>
+        <div style="background-color: black; color: white;"><p class="sempadding">Este conteudo não tem padding<p></div>
+
+        <div style="background-color: black; color: white;"><p class="compadding">Este conteudo tem Padding</p></div>
+    </div>
+
+    <!--Padding com Width-->
+
+    <!--Um elemento com 200px de largura e 25px de padding tem um tamanho total de 250px na horizontal, para respeitarmos a largura do elemento, podemos usar a propriedade: box-sizing com o valor border-box; -->
+    <div class="conteudo">
+        <h1>Padding com Width</h1>
+        <div class="sem-border-box">
+            <p>Conteudo 1</p>
+        </div>
+
+        <div class="border-box">
+            <p>Conteudo 2</p>
+        </div>
+    </div>
+
+    <!--Border-->
+    <!--Podemos arredondar a borda ultilizadno a propriedade: border-radius-->
+    <div class="conteudo">
+        <h1>Border</h1>
+        <div class="border-1"><p>Borda 1</p></div>
+        <div class="border-2"><p>borda 2</p></div>
+    </div>
+
+    <!--Margin-->
+    <div class="conteudo">
+        <h1>Margin</h1>
+        <div class="margin">
+            <p>Eu tenho margin</p>
+        </div>
+        <div class="margin-top">
+            <p>Eu tenho margin, no topo</p>
+        </div>
+        <div class="margin-shorthand">
+            <p>Margin com ShortHand</p>
+        </div>
+    </div>
+
+    <!--BOX-MODEL-->
+    <div class="conteudo">
+        <div class="BOX-MODEL">
+            <h1>Tenho todas as propriedades de BOX-MODEL</h1>
+        </div>
+    </div>
+
+    
+</body>
+</html>

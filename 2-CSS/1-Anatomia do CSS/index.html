@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--EXTERNAL CSS-->
+    <link rel="stylesheet" href="Estilo/style.css"> 
+    <link rel="stylesheet" href="Estilo/lista.css">
+    <title>Inserindo CSS com Inline</title>
+
+    <!--INTERNAL CSS-->
+    <style>
+        h2{
+            background-color: gray;
+            color: white;
+        }
+        div{
+            border: 3px solid black;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        /*ISTO É UM COMENTÁRIO NO CSS*/
+    </style>
+</head>
+<body>
+    <div> <!-- 1 - INLINE CSS-->    
+        <h1 style="color: rgb(3, 156, 167)">Fui estilizado pelo CSS  - INLINE</h1>
+        <!--MULTIPLAS REGRAS-->
+        <h1 style="background-color: rgb(31, 31, 31); color: rgb(151, 71, 231); border: 2px solid rgb(255, 238, 1);">Outro título com MULTIPLAS REGRAS - INLINE</h1>
+    </div>
+
+    <div> <!--INTERNAL CSS-->  
+        <h2>Eu fui estilizando pelo CSS interno - INTERNAL</h2>
+        <h2>Todos os h2 dentro do body foram estilizados pelo internal - internal</h2>
+    </div>
+
+    
+    <div> <!--EXTERNAL CSS-->
+        <h3>Eu fui estilizado pelo CSS externo - EXTERNAL</h3>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, repudiandae.</h3>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+    </div>
+
+    
+    <div> <!--ORDEM DO CSS-->
+        <h2 style="background-color: white; color: rgb(248, 10, 10); padding: 5px; font-family: Arial, Helvetica, sans-serif;">ORDEM DO CSS
+            <ol>
+                <li>INLINE CSS</li>
+                <li>INTERNAL CSS = EXTERNAL CSS</li>
+                <li>PADRÃO DO NAVEGADOR</li>
+            </ol>
+            <p>Interno e externo tem a mesma prioridade, a ultima regra tem prioridade sob a outra...</p>
+        </h2>
+    </div>
+
+    <div> <!--MULTIPLOS CSS-->
+        <P>LISTA COM UM OUTRO CSS EXTERNO (lista.css)</P>
+        <ul> <!--LISTA-->
+            <li>BANANA</li>
+            <li>MAÇA</li>
+            <li>MANGA</li>
+        </ul>
+    </div>
+
+
+
+</body>
+</html>

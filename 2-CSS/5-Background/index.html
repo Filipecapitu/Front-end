@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        /*bg-image*/
+        .bg-image{
+            background-image: url(imagens/noite_estrelada.jpeg);
+            color: gray;
+            padding: 10px;
+        }
+        
+        /*Centralizando a imagem de background*/
+        .not-center,
+        .center{
+            height: 400px;
+            width: 400px;
+            background-image: url(imagens/quadrado_central.jpg);
+        }
+        .center{
+            background-position: center center;
+            background-size: cover; 
+        }
+        
+    </style>
+</head>
+<body>
+    <!--bg image-->
+    <h1 class="bg-image">Este título contem uma imagem</h1>
+
+    <!--Centralizando a imagem de backcground-->
+    <div class="center"></div>
+    <div class="not-center"></div>
+    
+    
+</body>
+</html>
