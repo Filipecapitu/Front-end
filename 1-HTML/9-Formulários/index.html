@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--FORMULÁRIOS
+    -form tem o papel de receber dados do usuário e enviar para um servidor, e também para validação de dados.
+
+    -As tags mais ultilizadas são: form, label e input
+    -form - cria o formulário e o delimita
+    -label - descreve os inputs
+    -input - é a tag que inserimos dados, há varios tipos, number, email, text e etc...-->
+
+    <h1>Formulários HTML</h1>
+    <!--1 - tributos do formulário-->
+    <div>
+        <p>Tributos do formulário</p>
+        <form action="register.php" method="post">
+            <label>Nome: </label>
+            <input type="text">
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+
+    <!--2- Atributo name-->
+
+    <!--Ultilizamos tributo name para configurar os nossos inputs, o valor é ligado ao proposito input,a  sua categoria-->
+    <!--Exemplo: Um input recebe a idade de um usuário, pode ter um name com valor de age/idade-->
+    <!--Este atributo é utilizado para pegar o valor quando o form é enviado para um servidor-->
+    <div>
+        <p>tributo name</p>
+        <form action="#">
+            <!--Atributo label (for), o valor deve ser o mesmo que o atributo name do atributo que corresponde aquela label-->
+            <label for="age">Idade:</label>
+            <input type="text" name="age">
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+
+
+    <!--Elemento select e seus tributos-->
+
+    <!--A tag select tem as opções representadas por tags de option-->
+    <!--O value estará em cada uma das options, e é isso que receberemos no lado do servidor-->
+    <!--Atributo seleted - Podemos iniciar o nosso input de select com uma opção selecionada, como fiz abaixo da option com value = "programador"-->
+    <div>
+        <p>elemento select:</p>
+        <form action="">
+            <label for="job">Selecione a sua profissão:</label>
+            <select name="job" id="job_id">
+                <option value="policial">Policial</option>
+                <option value="medico">Médico</option>
+                <option value="professor">Professor</option>
+                <option value="programador" selected>Programador</option>
+            </select>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <!--Multiplas seleções com select-->
+
+    <!--Precisamos inserir o atributo multiple na tag select-->
+    <div>
+        <p>Multiplas seleções com select:</p>
+        <form action="">
+            <label for="items" >Selecione os itens desejados</label>
+            <select name="items" id="items_id" multiple>
+                <option value="xtudo">X-tudo</option>
+                <option value="batata">Batata frita</option>
+                <option value="acai">Açai</option>
+                <option value="churrasco">Churrasco</option>
+            </select>
+           <input type="submit" value="enviar"> 
+        </form>
+    </div>
+
+    <!--A tag textarea-->
+
+    <!--Semelhante ao input text, podemos utilizar para textos maiores, um exemplo é a bio do instagram-->
+    <!--O tributo cols é usado para largura e rows é usado para altura-->
+    <div>
+        <p>textarea:</p>
+        <form action="">
+            <label for="comment">Escreva abaixo o que voce achou do post?</label>
+            <textarea name="comment" cols="80" rows="5"></textarea>
+        </form>
+        <input type="submit" value="enviar">
+    </div>
+
+    <!--Fieldset e legend-->
+
+    <!--Fieldset -> responsável por agrupar inputs-->
+    <!--legend -> Como uma label, que descreve os inputs agrupados-->
+    <div>
+        <p>Feldset e legend:</p>
+        <form action="#">
+            <fieldset>
+                <legend>Preencha as suas informações</legend>
+                <label for="firstname">Nome:</label>
+                <input type="text" name="firstname" placeholder="Digite seu nome">
+                <label for="age">Idade</label>
+                <input type="number" name="age" placeholder="Digite sua idade">
+                <input type="submit" value="enviar">
+            </fieldset>
+        </form>
+    </div>
+
+    <!--datalist-->
+
+    <!--datalist -> é como um select, porém com um autocomplete--> 
+    <!--Podemos pesquisar por possíveis valores para preencher o input, ou selecionar alguma opção por meio de uma lista-->
+    <!--A opções são linkadas por um tributo chamado [list]-->
+    <div>
+        <p>datalist:</p>
+        <label for="flavor">Escolha o sabor:</label>
+        <input type="text" name="flavor" list="flavors">
+
+        <form action="#">
+            <datalist id="flavors">
+                <option value="RJ">Rio De Janeiro</option>
+                <option value="RS">Rio Grande Do Sul</option>
+                <option value="BH">Belo Horizonte</option>
+                <option value="Manga"></option>
+                <option value="Uva"></option>
+            </datalist>
+        </form>
+    </div>
+
+    <!--Input para senha-->
+    <div>
+        <p>Input para senha:</p>
+        <form action="#">
+            <label for="password">Senha:</label>
+            <input type="password" name="password">
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+
+    <!--Reiniando o form-->
+
+    <!--Podemos reiniciar todos os campos do form, utilizando o input do tipo reset-->
+    <div>
+        <p>reiniciando o form com reset:</p>
+        <form action="#">
+            <label for="email">Digite seu e-mail:</label>
+            <input type="email" name="email" >
+            <label for="senha">Digite sua senha:</label>
+            <input type="password" name="senha">
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Apagar">
+        </form>
+    </div>
+
+    <!--Input radio-->
+
+    <!--Esse input é utilizado para selecionar apenas uma opção de varias possibilidades-->
+    <!--Não podemos escolher dois, então há a necessidade da decisão entre uma das opções-->
+
+    <!--Usamos a tag value nos inputs, para enviar a informação do resultado para o backend-->
+
+    <div>
+        <p>input radio:</p>
+        <form action="#">
+            <label for="car_model">Escolha o modelo do seu carro:</label>
+            <div class="radio">
+                <input type="radio" value="bmw" name="car_model">
+                <label for="bmw">BMW</label>
+
+                <input type="radio" value="ferrari" name="car_model">
+                <label for="ferrari">Ferrari</label>
+
+                <input type="radio" value="renault" name="car_model">
+                <label for="ranoult">Renault</label>
+            </div>
+        </form>
+    </div>
+    
+    <!--Checkbox-->
+
+    <!--O checkbox é similar ao radio-->
+    <!--Temos que selecionar uma ou mais opções, e tmabém cancelar a seleção de uma opção-->
+
+    <!--Usamos a tag value nos inputs, para enviar a informação do resultado para o backend-->
+    <!--Para selecionar mais de uma opção no checkbox, precisamos declarar a tag name como uma array -> [] -->
+    <div>
+        <p>checkbox:</p>
+        <form action="#">
+            <label for="optionals">Opcionais do carro:</label>
+            <div class="radio">
+
+                <input type="checkbox" name="optionals[]" value="big_tires">
+                <label for="big_tires">Pneus Grandes</label>
+
+                <input type="checkbox" name="optionals[]" value="turbo_engine">
+                <label for="turbo_engine">Motor Turbo</label>
+
+                <input type="checkbox" name="optionals[]" value="hybrid">
+                <label for="hybrid">Hibrido</label>
+            </div>
+        </form>
+    </div>
+
+    <!--input data-->
+    <div>
+        <p>input data:</p>
+        <form action="#">
+            <label for="birthday">Insira sua data de aniversário</label>
+            <input type="date" name="birthday">
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+
+    <!--input para arquivos-->
+    <div>
+        <p>input para arquivos:</p>
+        <form action="#">
+            <label for="arquivo"></label>
+            <input type="file" name="arquivo">
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+
+    <!--input para números-->
+    <div>
+        <p>input para números:</p>
+        <form action="#">
+            <label for="numero">Digite o número dsejado:</label>
+            <input type="number" name="numero">
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+
+    <!--input para e-mails-->
+    <div>
+        <p>input para e-mail:</p>
+        <form action="#">
+            <label for="email">Digite seu e-mail:</label>
+            <input type="email" name="email" id="">
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+
+    <!--Atributo value-->
+
+    <!--Com o value podemos definiar um valor ao input alvo-->
+    <!--Como se o usuário já tivesse preenchido algo, muito utilizado quando temos um valor padrão!-->
+    <div>
+        <p>atributo value</p>
+        <form action="#">
+            <label for="emprego">Qual é seu emprego?</label>
+            <input type="text" name="emprego" value="Programador">
+        </form>
+    </div>
+
+    <!--Atributo disabled-->
+
+    <!--O atributo é utilizado para bloquar um input, utíl quando não queremos que o usuário preencha um determinado input
+    -->
+    <!--Obs: caso tenha uma value declarando o valor do input, será completamente ignorado após o envio do formulário ao backend-->
+    <div>
+        <p>atributo disabled</p>
+        <form action="#">
+            <label for="disabilidar">Tente digitar seu nome no input text abaixo:</label>
+            <input type="text" name="desabilitar" value="Não consegue né? kkk" disabled>
+        </form>
+    </div>
+
+    <!--Atributo placeholder -->
+
+    <!--Ulilizamos para dar dicas ao usuário do sistema, pois será exibida no próprio input-->
+    <div>
+        <p>Atributo placeholder</p>
+        <form action="#">
+            <label for="dicas">Digite seu nome abaixo:</label>
+            <input type="text" name="dicas" placeholder="Digite seu nome aqui">
+        </form>
+    </div>
+
+
+    <!--Atributo required--> 
+
+    <!--Obrigamos o usuário a preenchar um campo, se tentarmos enviar o form sem um valor no campo com required, recebemos um alerta da página-->
+    <div>
+        <p>Atributo required:</p>
+        <form action="#">
+            <label for="obrigatorio">Tente não preencher o campo abaixo:</label>
+            <input type="number" name="obrigatorio" required>
+            <input type="submit" value="enviar">
+        </form>
+    </div>
+</body>
+</html>
