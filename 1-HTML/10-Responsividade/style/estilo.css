@@ -1,0 +1,30 @@
+/*MEDIA QUERY*/
+#mudeacor{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+@media screen and (max-width: 700px) { /*A alteração da cor será feita entre 0px até o maximo 700px*/
+    #mudeacor{
+        color: blue;
+    }
+}
+
+@media screen and (min-width: 800px) { /*A alteração da cor será feita entre 800px pra cima*/
+    #mudeacor{
+        color: pink;
+    }
+    
+}
+
+/*LANDSCAPE*/
+#landscape{
+    display: none;
+}
+
+@media screen and (orientation: landscape ) {
+    #landscape{
+        display: block;
+    }
+    
+}
