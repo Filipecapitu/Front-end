@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding-bottom: 500px;
+}
+
+.topic{
+    border: 1px solid #000;
+    margin-bottom: 25px;
+}
+
+.topic .h2{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.topic .p{
+    background-color: rgb(184, 230, 197);
+}
+
+/*----------------------REGRAS PARA O ELEMENTO PAI----------------------*/
+/*1 flex direction - row*/
+
+.direction1{
+    background-color: #ccc;
+    display: flex; /*O valor padrão do display:flex; é row (linha) - flex-direction:row;*/
+    margin-bottom: 20px;
+}
+
+.direction2{
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column; /*posiciona os elementos em coluna*/
+}
+
+/*2 flex wrap*/
+/*Há situações que queremos x elementos por linha, por isso ultilizamos a regra wrap*/
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; /*O width vem com 100% por padrão*/
+}
+
+.wrap .p{
+    width: 50%; /*Cada elemento vai ocupar 50% da linha, assim deixando somente dois elementos por linha*/
+}
+
+/*3 justify-content*/
+/*Com justify é possivel mudar como o conteudo é posicionado no eixo horizontal*/
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+
+}
+
+.justify-around{
+    display: flex;
+    justify-content: space-around;
+}
+
+.justify-between{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.justify-end{
+    display: flex;
+    justify-content: end;
+
+}
+
+.justify-center p,
+.justify-around p,
+.justify-between p,
+.justify-end p {
+    width: 30px;
+    border: 1px solid #000;
+}
+
+/*4 align-items*/
+/*Com justify é possivel mudar como o conteudo é posicionado no eixo horizontal, já com o align nos permite mudar os elementos na vertical*/
+
+.align-center{
+    display: flex;
+    align-items: center;
+}
+
+.align-stretch{
+    display: flex;
+    align-items: stretch;
+}
+
+
+.align-end{
+    display: flex;
+    align-items: end;
+}
+
+.align-center,
+.align-stretch,
+.align-end{
+    border: 1px solid #000;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+
+/*5 - Gap*/
+/*Utilizamos o gap para dar espaço entre os elementos*/
+.gap { 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gap .p{
+    width: 45%;
+    border: 1px solid black;
+}
+
+/*----------------------REGRAS PARA O ELEMENTO FILHO----------------------*/
+
+/*6 - order*/
+/*Podemos mudar a ordem dos elementos com order*/
+
+.order{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order .p{
+    background-color: rgb(222, 194, 189);
+    border: 1px solid black;
+}
+
+#one{
+    order: 1;
+}
+
+#two{
+    order: 2;
+}
+
+#three{
+    order: 3;
+}
+
+#four{
+    order: 4;
+}
+
+/*7 - grow*/
+/*Podemos mudar a proporção de um ou mais elementos filhos, a with precisa estar sem valor, como automática. EX: Se colocarmos grow como 2, o elemento vai crescer duas vezes mais que os outros quando estiver se adaptando no container*/
+
+.grow{
+    display: flex;
+
+}
+
+.grow .p{
+    border: 1px solid black;
+}
+
+#one{
+    flex-grow: 2;
+}
+
+#four{
+    flex-grow: 2;
+}
+   
+/*8 - basis*/
+/*Configura a largura base do elemento, podemos trabalhar com basis e grow juntas*/
+
+.basis{
+    display: flex;
+}
+
+.basis .p{
+    flex-basis: 50px;
+}
+
+/*9 - shrink*/
+/*O oposto de grow, ultilizamos quando precisamos manter o tamanho dos outros elementos, então o elemento shrink diminui o seu tamanho para manter o dos outros - obs: usamos esta regra em conjunto de basis e grow*/
+
+.shrink{
+    display: flex;
+}
+
+.ps{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    width: auto;
+    border: 1px solid black;
+    background-color: #cacaca;
+}
+
+.small{
+    flex-shrink: 2;
+    color: red;
+}
+
+.big{
+    flex-shrink: 3;
+    color: blue;
+}
+
+/*10 - flex shorthand*/
+/*Ultilizando apenas flex, conseguimos configurar grow, shrink e basis, desta maneira: flex: 2 1 100px*/
+
+.shorthand{
+    display: flex;
+}
+
+.sh{
+    background-color: rgb(212, 108, 108);
+    border: 1px solid black;
+    width: auto;
+
+    flex: 1 1 100px;
+}
+
+.shbig{
+    flex: 3 0 100px;
+}
+
+.shsmall{
+    flex: 1 3 50px;
+}
+
+
+/*11 - align-self*/
+/*Alinha um elemento diferente dos demais, podemos centralizar um elemento enquanto os outros segurem a regra de alinhamento do container*/
+
+.auto-alignment{
+    height: 300px;
+    display: flex;
+    align-items: end;
+    border: 1px solid black;
+}
+
+.autoa{
+    background-color: pink;
+    width: 50%;
+    border: 1px solid black;
+}
+
+.auto-alignment .different{
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
